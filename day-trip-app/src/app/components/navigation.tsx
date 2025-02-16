@@ -3,32 +3,31 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800">
+          <div className="text-2xl font-bold text-gray-800 dark:text-white">
             <Link href="/">Brand</Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-gray-600 hover:text-black">Home</Link>
-            <Link href="/about" className="text-gray-600 hover:text-black">About</Link>
-            <Link href="/ca1" className="text-gray-600 hover:text-black">CA1</Link>
-            <Link href="/sanFrancisco" className="text-gray-600 hover:text-black">San Francisco</Link>
-            <Link href="/tahoe" className="text-gray-600 hover:text-black">Lake Tahoe</Link>
-            <Link href="/wineCountry" className="text-gray-600 hover:text-black">Napa & Sonoma</Link>
-            <Link href="/sfSelfTour" className="text-gray-600 hover:text-black">SF Self Tour</Link>
+          {/* Desktop Menu + Dark Mode Toggle */}
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">Home</Link>
+            <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">About</Link>
+            <DarkModeToggle />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600">
+          <div className="md:hidden flex items-center">
+            <DarkModeToggle />
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 dark:text-gray-300 ml-4">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
@@ -37,18 +36,11 @@ export default function Navigation() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 py-2 space-y-2 shadow-md">
-          <Link href="/" className="block text-gray-600 hover:text-black">Home</Link>
-          <Link href="/about" className="block text-gray-600 hover:text-black">About</Link>
-          <Link href="/ca1" className="block text-gray-600 hover:text-black">Services</Link>
-          <Link href="/sanFrancisco" className="block text-gray-600 hover:text-black">Contact</Link>
-          <Link href="/tahoe" className="block text-gray-600 hover:text-black">Lake Tahoe</Link>
-          <Link href="/wineCountry" className="block text-gray-600 hover:text-black">Napa & Sonoma</Link>
-          <Link href="/sfSelfTour" className="block text-gray-600 hover:text-black">SF Self Tour</Link>
+        <div className="md:hidden bg-white dark:bg-gray-900 px-4 py-2 space-y-2 shadow-md">
+          <Link href="/" className="block text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">Home</Link>
+          <Link href="/about" className="block text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white">About</Link>
         </div>
       )}
     </nav>
   );
 }
-
-

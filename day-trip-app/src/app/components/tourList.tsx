@@ -45,14 +45,16 @@ export default function TourList() {
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center mb-6">Day Trips</h2>
+      <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-gray-200">
+        Day Trips
+      </h2>
 
       {/* Tour Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {tours.map((tour) => (
           <div
             key={tour.id}
-            className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105"
+            className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 shadow-md rounded-lg overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105"
             onClick={() => setSelectedTour(tour)}
           >
             <img
@@ -69,9 +71,11 @@ export default function TourList() {
 
       {/* Description Area */}
       <div className="mt-6">
-        <h3 className="text-2xl font-semibold mb-2">Tour Description</h3>
+        <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-200">
+          Tour Description
+        </h3>
         <textarea
-          className="w-full h-32 p-3 border rounded-lg shadow-sm"
+          className="w-full h-32 p-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 rounded-lg shadow-sm transition-colors duration-300"
           readOnly
           value={selectedTour.description}
         />

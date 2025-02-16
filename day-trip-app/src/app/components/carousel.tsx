@@ -16,7 +16,7 @@ const images = [
 
 export default function Carousel() {
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg transition-colors duration-300">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={10}
@@ -25,7 +25,7 @@ export default function Carousel() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
-        className="rounded-xl overflow-hidden shadow-lg"
+        className="rounded-xl overflow-hidden"
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

@@ -1,11 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import Carousel from "./components/carousel";
 import TourList from "./components/tourList";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center p-6">
+    <div className="min-h-screen flex flex-col items-center p-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
       {/* Carousel Section */}
       <h1 className="text-2xl font-bold mb-6">Image Carousel</h1>
       <Carousel />
@@ -14,6 +14,9 @@ export default function Home() {
       <div className="mt-12 w-full">
         <TourList />
       </div>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
