@@ -5,8 +5,8 @@ import { FaInstagram, FaYoutube, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 py-6 mt-12 transition-colors duration-300">
-      <div className="container mx-auto text-center">
+    <footer className="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 py-6 mt-auto transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6 mb-4">
           <a
