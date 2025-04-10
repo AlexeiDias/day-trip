@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌄 Norcal Explorer – Day Trip Booking Platform
 
-## Getting Started
+Welcome to **Norcal Explorer**, a modern, immersive day trip booking experience for adventurous travelers exploring Northern California. From Lake Tahoe to Napa Wine Country, this project showcases stunning visuals, smooth UX, and advanced features including virtual tours and booking forms.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
+👉 [View the Live Site](https://your-deployed-url.com)  
+👉 [Project Repository](https://github.com/AlexeiDias/day-trip)
+
+---
+
+## 🧰 Technologies Used
+
+### 🖥️ Frontend
+
+- **Next.js 13+ (App Router)** – React framework with file-based routing and server-side rendering
+- **React 18** – Component-based UI structure
+- **Tailwind CSS** – Utility-first responsive styling
+- **Pico.css (for landing templates)** – Lightweight, modern CSS library
+- **Next/Image** – Optimized image handling
+- **Matterport 3D iFrames** – Embedded virtual walking tours
+
+### 🌐 Hosting & Deployment
+
+- **Vercel** – Instant deployments, serverless support, and Next.js optimizations
+- **GitHub** – Version control, team collaboration
+
+### 🎥 Media & Content
+
+- **Unsplash** – High-resolution photography
+- **.mp4 Videos** – Custom video backgrounds (optimized via FFmpeg)
+- **Matterport** – 3D virtual tour embeds
+
+---
+
+## 📂 Project Structure
+
+---
+
+## ✨ Features
+
+- 🔥 **Responsive layout** across all devices
+- 🎞️ **Autoplay background videos** and **Matterport virtual tours**
+- 📋 **Dynamic tour pages** with rich media
+- 📅 Booking form modal with user input validation
+- 🗺️ Highlighted tour locations and attractions
+- 🌗 Dark mode friendly
+
+---
+
+## 🧪 Local Development
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/AlexeiDias/day-trip.git
+   cd day-trip
+
+   Install dependencies
+   npm install
+   ```
+
+Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
