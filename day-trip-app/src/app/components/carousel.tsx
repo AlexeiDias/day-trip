@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  "/images/image1.jpg",
-  "/images/image2.jpg",
-  "/images/image3.jpg",
-  "/images/image4.jpg",
+  "/images/carmelBay.jpeg",
+  "/images/ebay.jpg",
+  "/images/stowLake.jpeg",
+  "/images/diAmorosa.jpeg",
 ];
 
 export default function Carousel() {
@@ -25,7 +25,7 @@ export default function Carousel() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
-        className="w-full h-[400px] md:h-[600px]" // Adjust height as needed
+        className="w-full h-[400px] md:h-[700px]" // Adjust height as needed
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>

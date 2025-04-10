@@ -29,17 +29,17 @@ export default function SanFranciscoSelfGuidedPage() {
   const sfAttractions = [
     {
       title: "Golden Gate Bridge",
-      image: "/images/sf-golden-gate.jpg",
+      image: "/images/GGB2.jpeg",
       description: "Walk or bike across the world-famous Golden Gate Bridge.",
     },
     {
-      title: "Alcatraz Island",
-      image: "/images/sf-alcatraz.jpg",
+      title: "Twin Peaks",
+      image: "/images/twin-peaks-1.jpeg",
       description: "Visit the historic prison that once held America’s most dangerous criminals.",
     },
     {
       title: "Chinatown",
-      image: "/images/sf-chinatown.jpg",
+      image: "/images/chinaTown.jpg",
       description: "Experience the vibrant culture and cuisine in the largest Chinatown outside Asia.",
     },
   ];

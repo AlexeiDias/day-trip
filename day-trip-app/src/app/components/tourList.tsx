@@ -4,42 +4,35 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const tours = [
+  
   {
     id: 1,
-    title: "San Francisco Car-Free",
-    image: "https://via.placeholder.com/300",
-    link: "/sanFranciscoSelfGuided",
+    title: "San Francisco",
+    image: "/images/GGB2.jpeg",
+    link: "/SFTour",
     description:
-      "Experience the best of San Francisco and beyond in just one day! Our expertly crafted 1-day trips ensure you make the most of your time, whether exploring the city’s iconic landmarks or venturing out on breathtaking scenic routes.",
+      "Discover the vibrant heart of the Bay Area with our San Francisco 1-Day Tour!",
   },
   {
     id: 2,
-    title: "Napa and Sonoma",
-    image: "https://via.placeholder.com/300",
+    title: "Wine Country",
+    image: "/images/steagsLeap.jpeg",
     link: "/wineCountry",
     description:
       "Embark on a delightful journey through California's premier wine regions—Sonoma and Napa Valleys.",
   },
   {
     id: 3,
-    title: "San Francisco",
-    image: "https://via.placeholder.com/300",
-    link: "/SFTour",
-    description:
-      "Discover the vibrant heart of the Bay Area with our San Francisco 1-Day Tour!",
-  },
-  {
-    id: 4,
     title: "Highway 1",
-    image: "https://via.placeholder.com/300",
+    image: "/images/17MileDR.jpg",
     link: "/ca1",
     description:
       "Embark on an unforgettable journey along Highway 1, one of the most scenic coastal drives in the world.",
   },
   {
-    id: 5,
+    id: 4,
     title: "Lake Tahoe",
-    image: "https://via.placeholder.com/300",
+    image: "/images/emerald-bay.jpeg",
     link: "/tahoe",
     description:
       "Our 1-day adventure takes you from San Francisco to the breathtaking landscapes of Lake Tahoe. Experience the thrill of rafting on the picturesque Truckee River, soak in the stunning views at Emerald Bay, and explore the vibrant charm of South Lake Tahoe.",
@@ -69,7 +62,7 @@ export default function TourList() {
       </h2>
 
       {/* Tour Cards Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {tours.map((tour) => (
           <Link key={tour.id} href={tour.link} passHref>
             <div
