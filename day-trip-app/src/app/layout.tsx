@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer"; // ✅ Import Footer
 import ThemeProvider from "./components/ThemeProvider";
 import "./globals.css";
 
@@ -21,17 +22,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <ThemeProvider>
+          {/* Navbar */}
           <header>
             <Navigation />
           </header>
+
+          {/* Main Content */}
           <main className="flex-grow">{children}</main>
+
+          {/* Footer (Global) */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

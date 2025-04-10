@@ -16,23 +16,23 @@ const images = [
 
 export default function Carousel() {
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg transition-colors duration-300">
+    <div className="w-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={10}
+        spaceBetween={0}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop
-        className="rounded-xl overflow-hidden"
+        className="w-full h-[400px] md:h-[600px]" // Adjust height as needed
       >
         {images.map((src, index) => (
           <SwiperSlide key={index}>
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-64 object-cover"
+              className="w-full h-full object-cover"
             />
           </SwiperSlide>
         ))}
